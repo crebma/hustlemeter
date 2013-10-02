@@ -57,7 +57,6 @@ app.controller('HustleController', function($scope, meter, HustleService) {
             },
             plotOptions: {
                 column: {
-                    grouping: false,
                     stacking: 'normal',
                     dataLabels: {
                         enabled: true,

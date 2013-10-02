@@ -158,8 +158,10 @@ angular.module('highcharts-ng', [])
         scope.$watch("config.series", function (newSeries, oldSeries) {
           //do nothing when called on registration
           if (newSeries === oldSeries) return;
-          processSeries(chart, newSeries);
-          chart.redraw();
+          chart.destroy();
+          chart = initialiseChart(scope, element, scope.config);
+//          processSeries(chart, newSeries);
+//          chart.redraw();
         }, true);
 
         scope.$watch("config.title", function (newTitle) {
