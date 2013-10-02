@@ -1,0 +1,29 @@
+<div class="col-lg-8">
+    <highchart id="chart1" config="chart"></highchart>
+</div>
+
+<div class="col-lg-3 col-lg-offset-1">
+    <form name="add-meter" ng-submit="addMeter()">
+        <div class="form-group">
+            <label for="earned" class="control-label">Earned Revenue</label>
+            <input type="text" class="form-control" id="earned" ng-model="newMeter.earned" placeholder="required" required integer>
+        </div>
+        <div class="form-group">
+            <label for="booked" class="control-label">Booked Fixed, Backlog</label>
+            <input type="text" class="form-control" id="booked" ng-model="newMeter.booked" placeholder="required" required integer>
+        </div>
+        <div class="form-group" class="control-label">
+            <label for="recurring">Recurring Revenue Forecast</label>
+            <input type="text" class="form-control" id="recurring" ng-model="newMeter.recurring" placeholder="required" required integer>
+        </div>
+        <div class="form-group" class="control-label">
+            <label for="new">New Business, Weighted</label>
+            <input type="text" class="form-control" id="new" ng-model="newMeter.new" placeholder="required" required integer>
+        </div>
+        <div class="form-group" class="control-label">
+            <label for="goal">Goal</label>
+            <input type="text" class="form-control" id="goal" ng-model="newMeter.goal" placeholder="required" required integer>
+        </div>
+        <button type="submit" class="btn btn-default">Update Meter</button>
+    </form>
+</div>
